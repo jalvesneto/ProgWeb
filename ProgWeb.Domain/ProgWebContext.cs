@@ -24,7 +24,7 @@ namespace ProgWeb.Domain
 
             if (!optionsBuilder.IsConfigured)
             {
-                String ConnectionString = Environment.GetEnvironmentVariable("ProgWeb_CONNECTION_STRING_LOCAL");
+                String ConnectionString = Environment.GetEnvironmentVariable("ProgWeb_CONNECTION_STRING");
                 optionsBuilder.UseMySql(ConnectionString, ServerVersion.Parse("10.4.22"));
             }
         }

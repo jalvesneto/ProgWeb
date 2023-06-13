@@ -8,7 +8,7 @@ namespace ProgWeb.Domain.Entities
         [Key]
         public long Id { get; set; }
 
-        public string Execicio { get; set; }
+        public string Exercicio { get; set; }
         public string TipoCaptacao { get; set; }
 
         public string CD_Esfera { get; set; }
