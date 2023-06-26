@@ -1,4 +1,5 @@
-﻿using ProgWeb.Domain.Entities;
+﻿using ProgWeb.Domain.Dtos;
+using ProgWeb.Domain.Entities;
 
 namespace ProgWeb.Infra.Repositories.Interface
 {
@@ -6,6 +7,17 @@ namespace ProgWeb.Infra.Repositories.Interface
     {
         List<AcompanhamentoOrcamentario> GetObjects(
             int page,
+            string funcao,
+            string subFuncao,
+            string acao,
+            string orgao,
+            string tituloPrograma,
+            string tipoPrograma,
+            string localizador,
+            string unidadeOrcamentaria
+            );
+
+        public ValoresDto GetValues(
             string funcao,
             string subFuncao,
             string acao,

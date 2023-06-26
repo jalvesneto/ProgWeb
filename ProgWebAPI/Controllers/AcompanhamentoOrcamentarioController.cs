@@ -49,5 +49,28 @@ namespace ProgWebAPI.Controllers
                         ));
         }
 
+        [HttpGet("ObterValores")]
+        public IActionResult GetValues(
+            string? funcao = "",
+            string? subFuncao = "",
+            string? acao = "",
+            string? orgao = "",
+            string? tituloPrograma = "",
+            string? tipoPrograma = "",
+            string? localizador = "",
+            string? unidadeOrcamentaria = ""
+            )
+        {
+            return Ok(_repository.GetValues(
+                            funcao,
+                            subFuncao,
+                            acao,
+                            orgao,
+                            tituloPrograma,
+                            tipoPrograma,
+                            localizador,
+                            unidadeOrcamentaria
+                        ));
+        }
     }
 }
