@@ -20,7 +20,7 @@ namespace ProgWeb.Domain.Entities
         //public string CD_UnidadeOrcamentaria { get; set; }
         public string DescricaoUnidadeOrcamentaria { get; set; }
 
-        //public string CD_Funcao { get; set; }
+        public string CD_Funcao { get; set; }
         public string DescricaoFuncao { get; set; }
 
         //public string CD_SubFuncao { get; set; }
