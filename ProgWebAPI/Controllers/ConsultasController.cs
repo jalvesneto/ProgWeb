@@ -14,6 +14,8 @@ namespace ProgWebAPI.Controllers
         }
 
         [HttpGet("{NrQuestao}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(204)]
         public IActionResult Index(int NrQuestao = 1)
         {
             switch (NrQuestao)

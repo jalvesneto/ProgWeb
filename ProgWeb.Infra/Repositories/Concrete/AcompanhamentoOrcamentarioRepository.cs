@@ -107,7 +107,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
                               DescricaoFuncao = aO.Key
                           };
 
-            return retorno;
+            return retorno.ToList();
         }
 
         public dynamic SelectSumWhereInQ2(string Param1, string whereTpPrograma, string whereTAcao)
@@ -141,7 +141,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
             t1.Join();
             t2.Join();
 
-            return new {Acao = valorAcao, Hospitais = valorHospitais};
+            return new List<object>(){ new { Acao = valorAcao ,Hospitais = valorHospitais}};
         }
 
         public dynamic SelectSumWhereInQ3(List<string> listParams)
@@ -193,7 +193,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
             t1.Join();
             t2.Join();
 
-            return new { Geral = valorGeral, Especifico = valorEspecifico };
+            return new List<object>{ new { Geral = valorGeral , Especifico = valorEspecifico } };
         }
 
         public dynamic SelectSumWhereInQ5(string Param1, string Param2)
@@ -227,7 +227,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
             t1.Join();
             t2.Join();
 
-            return new { Geral = valorGeral, Especifico = valorEspecifico };
+            return new List<object> { new { Geral = valorGeral , Especifico = valorEspecifico } };
         }
 
         public dynamic SelectSumQ6()
@@ -250,7 +250,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
         {
             ProgWebContext _context = new ProgWebContext();
             var retorno = from aO in _context.AcompanhamentoOrcamentario
-                          where Convert.ToInt32(aO.DescricaoFuncao) == cd_Descricao
+                          where Convert.ToInt32(aO.CD_Funcao) == cd_Descricao
                           group new { aO } by aO.DescricaosubFuncao into aO
                           select new
                           {
@@ -311,7 +311,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
             t1.Join();
             t2.Join();
 
-            return new { Geral = valorGeral, Especifico = valorEspecifico };
+            return new List<object> { new { Geral = valorGeral , Especifico = valorEspecifico } };
         }
 
         public dynamic SelectSumQ10()

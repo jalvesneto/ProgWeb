@@ -8,6 +8,7 @@ namespace ProgWeb.Domain
         public DbSet<AcompanhamentoOrcamentario> AcompanhamentoOrcamentario { get; set; }
         public DbSet<Esfera> Esferas { get; set; }
         public DbSet<Funcao> Funcoes { get; set; }
+        public DbSet<Localizacao> Localizacao { get; set; }
         public DbSet<Localizador> Localizadores { get; set; }
         public DbSet<Orgao> Orgaos { get; set; }
         public DbSet<Produto> Produtos { get; set; }
@@ -18,6 +19,7 @@ namespace ProgWeb.Domain
         public DbSet<UnidadeMedida> UnidadesMedida { get; set; }
         public DbSet<UnidadeMedidaPO> UnidadesMedidaPO { get; set; }
         public DbSet<UnidadeOrcamentaria> UnidadesOrcamentaria { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
