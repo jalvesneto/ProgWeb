@@ -18,7 +18,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
             var localizacaoOnDb = _localizacaoDAO.Get().Where(x => x.IpAddress == localizacao.IpAddress).FirstOrDefault();
             if (localizacaoOnDb != null)
             {
-                if (localizacaoOnDb.CreatedDate == DateTime.Today)
+                if (localizacaoOnDb.CreatedDate.Date == DateTime.Today.Date)
                 {
                     return localizacaoOnDb;
                 }
@@ -26,7 +26,7 @@ namespace ProgWeb.Infra.Repositories.Concrete
                 {
                     localizacaoOnDb.Location = localizacao.Location;
                     localizacaoOnDb.CreatedDate = DateTime.Now;
-                    _localizacaoDAO.Update(localizacao);
+                    _localizacaoDAO.Update(localizacaoOnDb);
                     return localizacaoOnDb;
                 }
             }
