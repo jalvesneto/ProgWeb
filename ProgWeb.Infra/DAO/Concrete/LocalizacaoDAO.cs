@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProgWeb.Domain.Entities;
 
 namespace ProgWeb.Infra.DAO.Concrete
 {
-    internal class LocalizacaoDAO
+    public class LocalizacaoDAO : BaseDAO<Localizacao>
     {
     }
 }

@@ -7,6 +7,7 @@
         void Delete(T obj, bool save = true);
         void Delete(long id, bool save = true);
         T GetOne(long id);
+        T GetOne(string id);
         IEnumerable<T> Get();
     }
 

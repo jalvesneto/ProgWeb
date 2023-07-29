@@ -25,6 +25,19 @@ namespace ProgWeb.Infra.DAO.Concrete
             }
         }
 
+        public virtual T GetOne(string id)
+        {
+            using (_context = new ProgWebContext())
+            {
+                var obj = _context.Set<T>().Find(id);
+                if (obj == null)
+                {
+                    throw new OperationCanceledException("Não foi possível encontrar um objeto com este Id");
+                }
+                return obj;
+            }
+        }
+
         public virtual T Create(T obj)
         {
             using (_context = new ProgWebContext())

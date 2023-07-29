@@ -6,7 +6,7 @@ namespace ProgWeb.Domain.Entities {
         [Key]
         public Guid IdUsuario { get; set; }
         public string UserName { get; set; }
-        [EmailAddress(ErrorMessage = "Insira um endereçod e e-mail válido.")]
+        [EmailAddress(ErrorMessage = "Insira um endereço de e-mail válido.")]
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime CreatedAt { get; set; }

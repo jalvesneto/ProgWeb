@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Domain.Dtos;
-using ProgWeb.Domain.Entities;
 using ProgWeb.Infra.Repositories.Interface;
-using System.Diagnostics.Metrics;
-using System.Net;
 
 namespace ProgWebAPI.Controllers
 {

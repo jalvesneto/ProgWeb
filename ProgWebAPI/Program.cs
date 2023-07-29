@@ -13,9 +13,11 @@ builder.Services.AddScoped<ISubFuncaoRepository, SubFuncaoRepository>();
 builder.Services.AddScoped<IDAO<SubFuncao>, SubFuncaoDAO>();
 builder.Services.AddScoped<IOrgaoRepository, OrgaoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
 builder.Services.AddScoped<IDAO<Orgao>, OrgaoDAO>();
 builder.Services.AddScoped<IDAO<UnidadeOrcamentaria>, UnidadeOrcamentariaDAO>();
 builder.Services.AddScoped<IDAO<Usuario>, UsuarioDAO>();
+builder.Services.AddScoped<IDAO<Localizacao>, LocalizacaoDAO>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
