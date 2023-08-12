@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Infra.Repositories.Interface;
 
@@ -5,6 +6,7 @@ namespace ProgWebAPI.Controllers
 {
     [ApiController]
     [Route("[Controller]")]
+    [Authorize]
     public class OrgaoController : ControllerBase
     {
 

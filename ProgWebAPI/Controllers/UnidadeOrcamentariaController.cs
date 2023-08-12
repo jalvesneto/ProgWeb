@@ -1,12 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Domain.Entities;
 using ProgWeb.Infra.DAO.Interface;
-using ProgWeb.Infra.Repositories.Interface;
 
 namespace ProgWebAPI.Controllers
 {
     [ApiController]
     [Route("[Controller]")]
+    [Authorize]
     public class UnidadeOrcamentariaController : ControllerBase
     {
 

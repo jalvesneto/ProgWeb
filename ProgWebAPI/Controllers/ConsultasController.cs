@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Infra.Repositories.Interface;
 
 namespace ProgWebAPI.Controllers
 {
     [Route("Consultas")]
+    [Authorize]
     public class ConsultasController : Controller
     {
         private readonly IAcompanhamentoOrcamentarioRepository _repository;

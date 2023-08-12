@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProgWeb.Domain\ProgWeb.Domain.csproj" />
+    <ProjectReference Include="..\ProgWeb.Util\ProgWeb.Util.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProgWeb.Domain.Dtos;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Domain.Entities;
-using ProgWeb.Infra.Repositories.Concrete;
 using ProgWeb.Infra.Repositories.Interface;
 
 namespace ProgWebAPI.Controllers
 {
     [ApiController]
     [Route("[Controller]")]
+    [Authorize]
     public class LocalizacaoController : ControllerBase
     {
         private readonly ILocalizacaoRepository _localizacaoRepository;
