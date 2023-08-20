@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProgWeb.Infra.Repositories.Interface;
+using ProgWeb.Util;
 
 namespace ProgWebAPI.Controllers
 {
@@ -73,6 +74,13 @@ namespace ProgWebAPI.Controllers
                             localizador,
                             unidadeOrcamentaria
                         ));
+        }
+
+        [HttpGet("AtualizarDados")]
+        public IActionResult GetDados(string url)
+        {
+            var result = WebScraping.CallUrl(url);
+            return Ok(result);
         }
     }
 }
